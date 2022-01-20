@@ -22,7 +22,7 @@ namespace XamarinMobil
 
         private void LogIn_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new LogIn());
+            Navigation.PushAsync(new LogIn());
         }
     }
 }
