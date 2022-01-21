@@ -6,6 +6,7 @@
             Title="{x:Static local:Projects.Name}">
 
     <ContentPage Title="О проекте">
+        <ScrollView>
         <StackLayout>
             <Label Text="Описание :" HorizontalTextAlignment="Center"/>
             <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ultricies orci, in porta sem. Vestibulum in risus iaculis, porta orci at, 
@@ -29,15 +30,27 @@
                    commodo sodales. Nunc ornare, turpis quis elementum maximus, libero sem semper arcu, nec vulputate nunc massa a ante. Curabitur eu iaculis metus. 
                    Aliquam venenatis iaculis quam. Aliquam ac nibh cursus, aliquam dui id, convallis leo. Fusce est erat, convallis eget molestie eu, accumsan nec felis."/>
         </StackLayout>
+        </ScrollView>
     </ContentPage >
     <ContentPage Title="Картинки">
         <StackLayout>
-            <Image Source="logo.png" WidthRequest="50"/>
-            <Image Source="logo.png"/>
-            <Image Source="logo.png"/>
-            <Image Source="logo.png"/>
-            <Image Source="logo.png"/>
-            <Image Source="logo.png"/>
+            <Grid Padding="50,20,30,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="logo.png" Grid.Column="0" Grid.Row="0"/>
+                <Image Source="logo.png" Grid.Column="0" Grid.Row="1"/>
+                <Image Source="logo.png" Grid.Column="1" Grid.Row="0"/>
+                <Image Source="logo.png" Grid.Column="1" Grid.Row="1"/>
+                <Image Source="logo.png" Grid.Column="0" Grid.Row="2"/>
+                <Image Source="logo.png" Grid.Column="1" Grid.Row="2"/>
+            </Grid>
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Контакты">
